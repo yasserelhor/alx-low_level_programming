@@ -22,10 +22,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		while (rO->prev != NULL)
 			rO = rO->prev;
 
-
 	i = 0;
-
-
 	while (rO != NULL)
 	{
 		if (i == index)
@@ -43,18 +40,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 				if (rO->next != NULL)
 					rO->next->prev = la3a;
 			}
-
-
 			free(rO);
 			return (1);
-
 		}
-
 		la3a = rO;
 		rO = rO->next;
 		i++;
 	}
-
-
 	return (-1);
 }
